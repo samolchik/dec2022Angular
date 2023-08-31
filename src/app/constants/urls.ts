@@ -4,8 +4,10 @@ const users = `${baseURL}/users`;
 const posts = `${baseURL}/posts`;
 
 const urls = {
-    base: users,
-    byId: (id: number): string=> `${posts}/${id}`
+    users: {
+        base: users,
+        byId: (id: number): string => `${posts}/${id}`
+    }
 };
 
 export {
