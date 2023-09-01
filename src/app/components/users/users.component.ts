@@ -15,8 +15,4 @@ export class UsersComponent implements OnInit {
     ngOnInit() {
         this.userService.getAll().subscribe(value => this.users = value)
     }
-
-    getUser(user: IUser) {
-        this.user = user
-    }
 }
