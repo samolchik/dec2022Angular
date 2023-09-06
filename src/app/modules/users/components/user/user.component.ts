@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {IUser} from "../../interfaces";
+import {Component, Input} from '@angular/core';
+import {IUser} from "../../../../interfaces";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -14,10 +14,9 @@ export class UserComponent {
    constructor(private router: Router, private activatedRoute: ActivatedRoute) {
    }
 
-    getDetails(): void {
+    toDetails(): void {
         this.router.navigate([this.user.id], {
             relativeTo: this.activatedRoute,
-            state: this.user
         })
     }
 }
